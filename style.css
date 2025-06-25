@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body, html {
+    height: 100%;
+    background-color: #1e1e2f;
+    color: #fff;
+  }
+  
+  .main {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .part1, .part2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 2rem;
+  }
+  
+  .part1 {
+    background: linear-gradient(135deg, #ff6b6b, #ff4757);
+    border-right: 2px solid #fff;
+  }
+  
+  .part2 {
+    background: linear-gradient(135deg, #2f3542, #57606f);
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #fff;
+    color: #ff4757;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background-color: #ff6b6b;
+    color: #fff;
+  }
+  
+  #animatedText {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    min-height: 50px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Animations */
+  @keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .scroll {
+    animation: scroll 5s linear infinite;
+    white-space: nowrap;
+  }
+  
+  .marquee {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+  
+  .marquee span {
+    display: inline-block;
+    white-space: nowrap;
+    position: absolute;
+    animation: scroll 5s linear infinite;
+  }
+  
+  .rotate {
+    display: inline-block;
+    animation: rotate 2s linear infinite;
+  }
+
+  /* Keep all previous styles */
+
+#animatedText {
+    font-size: 2rem;
+    margin-top: 2rem;
+    min-height: 60px;
+    text-align: center;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+  
